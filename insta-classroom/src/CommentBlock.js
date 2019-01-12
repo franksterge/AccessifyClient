@@ -26,17 +26,17 @@ export class CommentBlock extends Component {
         //     this.setState({
         //     });
         // });
-        video.ontimeupdate = function() {
-            clearInterval(this.state.playInterval);
-            let started = setInterval(() => {
-                let time = Math.round(video.currentTime);
-                if (!this.state.timestamp.includes(this.state.transcription[time])) {
-                    this.setState({
-                        timestamp: this.state.timestamp.concat(this.state.transcription[time])
-                    });
-                }
-            },1000);
-        };
+        // video.ontimeupdate = function() {
+        //     clearInterval(this.state.playInterval);
+        //     let started = setInterval(() => {
+        //         let time = Math.round(video.currentTime);
+        //         if (!this.state.timestamp.includes(this.state.transcription[time])) {
+        //             this.setState({
+        //                 timestamp: this.state.timestamp.concat(this.state.transcription[time])
+        //             });
+        //         }
+        //     },1000);
+        // };
         video.addEventListener("playing", (ev)=> {
             let started = setInterval(() => {
                 let time = Math.round(video.currentTime); 
