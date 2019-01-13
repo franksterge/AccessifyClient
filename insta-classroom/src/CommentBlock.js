@@ -13,7 +13,7 @@ export class CommentBlock extends Component {
     }
 
     componentDidMount() {
-        let url = `http://10.19.140.202:3000/transcript?name=${this.props.name}`;
+        let url = `https://accessify.herokuapp.com/transcript?name=${this.props.name}`;
         fetch(url).then((data) => {
             return data.json();
         }).then((response) => {
