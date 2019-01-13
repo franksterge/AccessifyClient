@@ -8,9 +8,9 @@ class App extends Component {
   render() {
     return (
       <div>
-      <VideoPlayer name="walking.mp4">
+      <VideoPlayer name="stuartreges.mp4">
       </VideoPlayer>
-      <CommentBlock name="walking.mp4"></CommentBlock>
+      <CommentBlock name="stuartreges.mp4"></CommentBlock>
       </div>
       // <div className="App">
       //   <header className="App-header">
