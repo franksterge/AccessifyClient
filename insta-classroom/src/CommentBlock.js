@@ -52,7 +52,7 @@ export class CommentBlock extends Component {
                 <h4>Transcription</h4>
                 <div id="transcription">
                     {this.state.timestamp.length > 0 && this.state.timestamp.map((timestamp) => {
-                        return <p><span>> :{timestamp}</span> {this.state.transcription[timestamp] ?  this.state.transcription[timestamp] : "No transcription found"}</p>
+                        return <p><span>> :{timestamp}</span> {this.state.transcription[timestamp] && this.state.transcription[timestamp] }</p>
                     })}
                 </div>
             </section>
