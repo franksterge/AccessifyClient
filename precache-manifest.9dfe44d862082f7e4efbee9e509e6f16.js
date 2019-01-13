@@ -12,23 +12,23 @@ self.__precacheManifest = [
     "url": "/AccessifyClient/static/js/runtime~main.d3ebc207.js"
   },
   {
-    "revision": "a561a89862c649e391b2",
-    "url": "/AccessifyClient/static/js/main.a561a898.chunk.js"
+    "revision": "bbca15c669f09a248275",
+    "url": "/AccessifyClient/static/js/main.bbca15c6.chunk.js"
   },
   {
     "revision": "a9550803084a7855c10a",
     "url": "/AccessifyClient/static/js/1.a9550803.chunk.js"
   },
   {
-    "revision": "a561a89862c649e391b2",
-    "url": "/AccessifyClient/static/css/main.22d79ce8.chunk.css"
+    "revision": "bbca15c669f09a248275",
+    "url": "/AccessifyClient/static/css/main.2ad61618.chunk.css"
   },
   {
     "revision": "a9550803084a7855c10a",
     "url": "/AccessifyClient/static/css/1.740f0ad8.chunk.css"
   },
   {
-    "revision": "d9a14e32ebd53f565b32cd30e6c984f9",
+    "revision": "3a16a671d0ae79368392f0c27852b279",
     "url": "/AccessifyClient/index.html"
   }
 ];
