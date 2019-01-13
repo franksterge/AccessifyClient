@@ -26,17 +26,18 @@ export default class ComposeComment extends Component {
     sendComment = () => {
 
         let video = document.getElementById("video-player");
-        let src = video.currentSrc;
-        let index = src.indexOf("name=");
-        src = src.substring(index + 5, src.length - 4);
-        console.log(src);
+        // let src = video.currentSrc;
+        // let index = src.indexOf("name=");
+        // src = src.substring(index + 5, src.length - 4);
+        // console.log(src);
 
         let time = Math.round(video.currentTime); 
 
         // firebase.database().ref(src).set({
         //     time: this.state.content
         // });
-        this.postCaption(src, this.state.content, time);
+        let name = this.props.name.replace(".mp4", "");
+        this.postCaption(name, this.state.content, time);
         console.log("comment sent at: " + time + " " + this.state.content);
         this.setState({"content": ""});
     }
