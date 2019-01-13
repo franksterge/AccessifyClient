@@ -5,6 +5,9 @@ import { VideoPlayer } from './VideoPlayer';
 import { CommentBlock } from './CommentBlock';
 import ComposeComment from './ComposeComment';
 import {Row, Col} from 'reactstrap';
+import LiveComments from './LiveComments';
+import firebase from 'firebase/app';
+
 
 class App extends Component {
   render() {
@@ -17,6 +20,7 @@ class App extends Component {
           <CommentBlock name="stuartreges.mp4"></CommentBlock>
         </Col>
         <Col sm="4">
+          <LiveComments></LiveComments>
           <ComposeComment></ComposeComment>
         </Col>
       </Row>
