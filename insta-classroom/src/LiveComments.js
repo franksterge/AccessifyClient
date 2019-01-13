@@ -62,7 +62,7 @@ export default class LiveComments extends Component {
         return (
             <div>
                 {Object.keys(this.state.comments).map(el => {
-                    return <p>{this.state.comments[el]}</p>
+                    return <p>{"> " + el + " : " + this.state.comments[el]}</p>
                 })}
             </div>
         );
