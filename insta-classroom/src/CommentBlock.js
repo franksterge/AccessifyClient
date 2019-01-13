@@ -23,7 +23,7 @@ export class CommentBlock extends Component {
         });
         let video = document.getElementById("video-player");
         video.addEventListener("playing", (ev) => {
-            let started = setInterval(() => {
+            setInterval(() => {
                 let time = Math.round(video.currentTime);
                 if (!this.state.timestamp.includes(time)) {
                     this.setState({
