@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import { VideoPlayer } from './VideoPlayer';
 import { CommentBlock } from './CommentBlock';
 import AllVideos from './AllVideos';
 import ComposeComment from './ComposeComment';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Button } from 'reactstrap';
+import Header from './Header';
 
 class App extends Component {
 
@@ -22,7 +22,6 @@ class App extends Component {
 	}
 
 	reset = () => {
-		console.log("here")
 		this.setState({
 			videoName: null
 		})
@@ -31,19 +30,20 @@ class App extends Component {
 	render() {
 		return (
 			<div>
+				<Header></Header>
 				{!this.state.videoName ?
 					<div>
 						<AllVideos set={this.setVideoName}></AllVideos>
 					</div>
 					:
 					<div>
-						<button onClick={() => this.reset()}>Back</button>
+						<Button style={{ margin: '1rem' }} onClick={() => this.reset()}>Back</Button>
 						<Row>
 							<Col sm="8">
 								<VideoPlayer name={this.state.videoName}>
 								</VideoPlayer>
+								<CommentBlock name={this.state.videoName}></CommentBlock>
 							</Col>
-							<CommentBlock name={this.state.videoName}></CommentBlock>
 							<Col sm="4">
 								<ComposeComment></ComposeComment>
 							</Col>
