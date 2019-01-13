@@ -5,6 +5,7 @@ import AllVideos from './AllVideos';
 import ComposeComment from './ComposeComment';
 import { Row, Col, Button } from 'reactstrap';
 import Header from './Header';
+import LiveComments from './LiveComments';
 
 class App extends Component {
 
@@ -45,7 +46,8 @@ class App extends Component {
 								<CommentBlock name={this.state.videoName}></CommentBlock>
 							</Col>
 							<Col sm="4">
-								<ComposeComment></ComposeComment>
+                <LiveComments name={this.state.videoName}></LiveComments>
+								<ComposeComment name={this.state.videoName}></ComposeComment>
 							</Col>
 						</Row>
 					</div>
