@@ -12,9 +12,9 @@ class App extends Component {
       <div>
       <Row>
         <Col sm="8">
-          <VideoPlayer name="walking.mp4">
+          <VideoPlayer name="stuartreges.mp4">
           </VideoPlayer>
-          <CommentBlock name="walking.mp4"></CommentBlock>
+          <CommentBlock name="stuartreges.mp4"></CommentBlock>
         </Col>
         <Col sm="4">
           <ComposeComment></ComposeComment>
