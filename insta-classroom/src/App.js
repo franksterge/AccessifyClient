@@ -3,14 +3,23 @@ import logo from './logo.svg';
 import './App.css';
 import { VideoPlayer } from './VideoPlayer';
 import { CommentBlock } from './CommentBlock';
+import ComposeComment from './ComposeComment';
+import {Row, Col} from 'reactstrap';
 
 class App extends Component {
   render() {
     return (
       <div>
-      <VideoPlayer name="walking.mp4">
-      </VideoPlayer>
-      <CommentBlock name="walking.mp4"></CommentBlock>
+      <Row>
+        <Col sm="8">
+          <VideoPlayer name="walking.mp4">
+          </VideoPlayer>
+          <CommentBlock name="walking.mp4"></CommentBlock>
+        </Col>
+        <Col sm="4">
+          <ComposeComment></ComposeComment>
+        </Col>
+      </Row>
       </div>
       // <div className="App">
       //   <header className="App-header">
