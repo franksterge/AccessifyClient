@@ -13,7 +13,7 @@ export class CommentBlock extends Component {
     }
 
     componentDidMount() {
-        let url = `http://10.19.140.202:3000/timestamp?name=${this.props.name}`;
+        let url = `http://10.19.140.202:3000/transcript?name=${this.props.name}`;
                 fetch(url).then((data) => {
                     return data.json();
                 }).then((response) => {
@@ -40,9 +40,9 @@ export class CommentBlock extends Component {
         video.addEventListener("playing", (ev)=> {
             let started = setInterval(() => {
                 let time = Math.round(video.currentTime); 
-                if (!this.state.timestamp.includes(this.state.transcription[time])) {
+                if (!this.state.timestamp.includes(time)) {
                     this.setState({
-                        timestamp: this.state.timestamp.concat(this.state.transcription[time])
+                        timestamp: this.state.timestamp.concat(time)
                     });
                 }
                 
@@ -81,7 +81,7 @@ export class CommentBlock extends Component {
         return (
             <React.Fragment>
                 {this.state.timestamp.length > 0 && this.state.timestamp.map((timestamp) => {
-                    return <p>{timestamp}</p>
+                    return <p>{this.state.transcription[timestamp]}</p>
                 })}
                 <div>
                     <h2></h2>

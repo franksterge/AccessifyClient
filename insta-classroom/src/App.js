@@ -3,6 +3,8 @@ import './App.css';
 import { VideoPlayer } from './VideoPlayer';
 import { CommentBlock } from './CommentBlock';
 import AllVideos from './AllVideos';
+import ComposeComment from './ComposeComment';
+import { Row, Col } from 'reactstrap';
 
 class App extends Component {
 
@@ -15,7 +17,7 @@ class App extends Component {
 
 	setVideoName = (name) => {
 		this.setState({
-			videoName: name 
+			videoName: name
 		});
 	}
 
@@ -36,28 +38,19 @@ class App extends Component {
 					:
 					<div>
 						<button onClick={() => this.reset()}>Back</button>
-						<VideoPlayer name={this.state.videoName}>
-						</VideoPlayer>
-						<CommentBlock name={this.state.videoName}></CommentBlock>
+						<Row>
+							<Col sm="8">
+								<VideoPlayer name={this.state.videoName}>
+								</VideoPlayer>
+							</Col>
+							<CommentBlock name={this.state.videoName}></CommentBlock>
+							<Col sm="4">
+								<ComposeComment></ComposeComment>
+							</Col>
+						</Row>
 					</div>
 				}
 			</div>
-			// <div className="App">
-			//   <header className="App-header">
-			//     <img src={logo} className="App-logo" alt="logo" />
-			//     <p>
-			//       Edit <code>src/App.js</code> and save to reload.
-			//     </p>
-			//     <a
-			//       className="App-link"
-			//       href="https://reactjs.org"
-			//       target="_blank"
-			//       rel="noopener noreferrer"
-			//     >
-			//       Learn React
-			//     </a>
-			//   </header>
-			// </div>
 		);
 	}
 }
