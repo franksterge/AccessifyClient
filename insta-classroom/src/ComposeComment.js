@@ -18,8 +18,12 @@ export default class ComposeComment extends Component {
 
     sendComment = () => {
         let video = document.getElementById("video-player");
+        console.log(video.src);
+        let time = Math.round(video.currentTime); 
 
-        let time = video.currentTime; 
+        // firebase.database().ref('comments/' + time).set({
+        //     time: content
+        // });
         
         console.log("comment sent at: " + time + " " + this.state.content);
         this.setState({"content": ""});
